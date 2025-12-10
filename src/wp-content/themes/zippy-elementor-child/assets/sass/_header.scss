@@ -1,6 +1,23 @@
-#header-block{
+#header-block {
   .elementor-button-icon-qty {
+    font-size: 10px;
     right: -10px !important;
-    top: 10px !important;
+    top: 0px !important;
+    @include tablet {
+      right: -10px !important;
+      top: 0px !important;
+    }
+    @include desktop {
+      right: -10px !important;
+      top: 10px !important;
+    }
+  }
+  .elementor-widget-jkit_nav_menu {
+    display: flex;
+  }
+  @media (min-width: 991px) {
+    .elementor-widget-jkit_nav_menu {
+      display: none !important;
+    }
   }
 }

@@ -1,15 +1,32 @@
 $(document).ready(function ($) {
   // Init variables
-  let active_tab = $("#hp-product-tabs-block .tab-nav-list").find(".active");
-  let selected_tab = $("#hp-product-tabs-block .tab-nav-list").find(".tab-nav");
-
+  let child_tab = $("#hp-product-tabs-block .tab-nav-list .tab-nav");
+  let selected_first_tab = $("#hp-product-tabs-block .tab-nav-list").find(
+    ".active"
+  );
+  // First Render
+  selected_first_tab.css({
+    background: "#0B2743",
+    color: "#ffffffff",
+  });
   // Action
-  selected_tab.on("click", function () {
+  child_tab.on("click", function (e) {
+    e.preventDefault();
+    child_tab.removeClass("on");
+    $(this).addClass("on");
     updateUISelectedTab();
   });
+
   // Function
   function updateUISelectedTab() {
-    active_tab.css({
+    child_tab.css({
+      background: "#ffffffff",
+      color: "#0B2743",
+    });
+
+    let selected_tab = child_tab.filter(".on");
+
+    selected_tab.css({
       background: "#0B2743",
       color: "#ffffffff",
     });

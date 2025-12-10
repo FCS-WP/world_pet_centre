@@ -2,8 +2,10 @@
   .elementor-widget-image-box {
     .elementor-image-box-title {
       height: auto;
-
       @include tablet {
+        height: 2lh;
+      }
+      @include desktop {
         height: 2lh;
       }
     }
@@ -12,6 +14,7 @@
 
 #hp-shop-category-block {
   .elementor-icon-box-wrapper {
+    align-items: center;
     .elementor-icon-box-icon {
       .elementor-icon {
         padding: 6px;
@@ -24,11 +27,15 @@
   .swiper {
     .swiper-slide {
       .elementor-icon-box-description {
+        height: 3lh;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 3;
         line-clamp: 3;
         -webkit-box-orient: vertical;
+        @include tablet {
+          min-height: 3lh;
+        }
       }
     }
   }
@@ -37,26 +44,37 @@
 #hp-product-tabs-block {
   .tab-navigation {
     .tab-nav-list {
-      gap: 15px;
-
+      gap: 24px;
+      flex-wrap: wrap;
       .tab-nav {
-        width: 20%;
+        width: 50%;
         border-radius: 25px;
         border: 1px solid var(--e-global-color-primary);
         color: var(--e-global-color-primary);
         background-color: var(--e-global-color-secondary);
-        padding: 12px 0px !important;
-
+        padding: 12px 5px !important;
         &:hover {
-          background-color: var(--e-global-color-primary);
-          color: var(--e-global-color-secondary);
+          background-color: var(--e-global-color-primary) !important;
+          color: var(--e-global-color-secondary) !important;
           cursor: pointer;
+        }
+        @include tablet {
+          width: 30%;
+        }
+        @include desktop {
+          width: 23%;
         }
       }
     }
   }
-
   .tab-content-list {
+    margin-top: 0px;
+    @include tablet {
+      margin-top: 12px;
+    }
+    @include desktop {
+      margin-top: 12px;
+    }
     .tab-content {
       padding: 15px 0px;
     }
@@ -66,8 +84,8 @@
     .elementor-widget-image {
       .elementor-widget-container {
         img {
-          height: auto;
-
+          height: 300px;
+          object-fit: cover;
           @include tablet {
             height: 250px;
             object-fit: scale-down;
@@ -94,5 +112,23 @@
       border-radius: 100%;
       background: var(--e-global-color-primary);
     }
+  }
+}
+
+#hp-faqs-block {
+  .elementor-tab-title {
+    padding-left: 0px;
+    display: flex;
+    align-items: center;
+    border-bottom: 0px;
+  }
+  .elementor-tab-content {
+    border-bottom: 0px;
+  }
+}
+
+#hp-faqs-information-block {
+  a {
+    color: var(--e-global-color-primary);
   }
 }

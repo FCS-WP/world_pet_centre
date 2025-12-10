@@ -1,0 +1,26 @@
+#checkout-block {
+  font-family: var(--e-global-color-secondary);
+  .woocommerce-info {
+    border-top-color: var(--e-global-color-primary);
+    .showcoupon {
+      color: var(--e-global-color-primary);
+      font-weight: 600;
+    }
+  }
+  .product-name,
+  bdi {
+    color: var(--e-global-color-primary) !important;
+  }
+  #place_order {
+    margin-top: 10px;
+    color: var(--e-global-color-secondary);
+    border: 1px solid var(--e-global-color-primary);
+    background: var(--e-global-color-primary);
+    padding: 14px 0px !important;
+    border-radius: 25px !important;
+    &:hover {
+      background: var(--e-global-color-secondary);
+      color: var(--e-global-color-primary);
+    }
+  }
+}
