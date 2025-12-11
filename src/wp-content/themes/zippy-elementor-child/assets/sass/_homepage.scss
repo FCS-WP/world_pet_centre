@@ -23,7 +23,6 @@
       }
     }
   }
-
   .swiper {
     .swiper-slide {
       .elementor-icon-box-description {
@@ -37,6 +36,12 @@
           min-height: 3lh;
         }
       }
+    }
+  }
+  .elementor-swiper-button {
+    display: none;
+    @include tablet {
+      display: flex;
     }
   }
 }
