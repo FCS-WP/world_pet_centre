@@ -7,7 +7,7 @@ $(document).ready(function ($) {
   // First Render
   selected_first_tab.css({
     background: "#0B2743",
-    color: "#ffffffff",
+    color: "#fff",
   });
   // Action
   child_tab.on("click", function (e) {
@@ -20,7 +20,7 @@ $(document).ready(function ($) {
   // Function
   function updateUISelectedTab() {
     child_tab.css({
-      background: "#ffffffff",
+      background: "#fff",
       color: "#0B2743",
     });
 
@@ -28,7 +28,7 @@ $(document).ready(function ($) {
 
     selected_tab.css({
       background: "#0B2743",
-      color: "#ffffffff",
+      color: "#fff",
     });
   }
 });
