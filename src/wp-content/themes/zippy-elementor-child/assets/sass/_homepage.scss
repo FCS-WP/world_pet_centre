@@ -69,6 +69,10 @@
         @include desktop {
           width: 23%;
         }
+        &.active{
+           background-color: var(--e-global-color-primary);
+           color: var(--e-global-color-secondary);
+        }
       }
     }
   }
