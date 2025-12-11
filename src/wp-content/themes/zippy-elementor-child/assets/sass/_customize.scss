@@ -1,0 +1,21 @@
+body {
+  p {
+    margin: 0px !important;
+  }
+}
+.elementor-menu-cart__main {
+  font-family: var(--e-global-typography-text-font-family) !important;
+}
+.jkit-close-menu,
+.jkit-hamburger-menu {
+  &:focus {
+    background: none !important;
+  }
+  &:focus-visible {
+    border: none !important;
+  }
+}
+.added_to_cart {
+  display: none !important;
+}
+
